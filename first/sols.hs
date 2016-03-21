@@ -1,6 +1,5 @@
 import Data.List
 import Debug.Trace (traceShow)
-import Control.Monad
 
 foo a b c = traceShow ("input a: " ++ show a) (a + b + c)
 main' = print (foo 1 2 3)
@@ -33,47 +32,10 @@ myMove = Action 1 (Coord 0 0)
 type CubeState = [[Int]]
 data ActionScheduled = AS (Coord, Int)
 
-instance Show ActionScheduled where
-  show (AS (c,n)) = "(" ++ show (xCoord c) ++ ", " ++ show (yCoord c) ++ ") <- " ++ show n
-
 data Q = Q [(CubeState, ActionScheduled)]
-
-
-incrementAction :: CubeState -> ActionScheduled -> Maybe ActionScheduled
-incrementAction xss (AS (c, n))  =
-  let a1 =
-        do n <- incrementNum xss n
-           return (AS (c, n))
-      a2 =
-        do c <- incrementCoord xss c
-           return (AS (c, n))
-  in  a1 `mplus` a2
-
-incrementNum :: CubeState -> Int -> Maybe Int
-incrementNum xss n = if n+1 < getDim xss then Just (n+1) else Nothing
-
-incrementCoord :: CubeState -> Coord -> Maybe Coord
-incrementCoord xss coord = incrementXCoord xss coord `mplus` incrementYCoord xss coord
-
-incrementXCoord :: CubeState -> Coord -> Maybe Coord
-incrementXCoord xss (Coord x y) =  if x+1 < getDim xss then Just (Coord (x+1) y) else Nothing
-
-incrementYCoord :: CubeState -> Coord -> Maybe Coord
-incrementYCoord xss (Coord x y) =  if y+1 < getDim xss then Just (Coord x (y+1)) else Nothing
-
-acts xss = let dim =  (getDim xss) -1 in [ AS (Coord x y, n) | x <- [0..dim], y<-[0..dim], n<-[0..dim]]
-
-
-data Comp = Comp [(ActionScheduled, Maybe ActionScheduled)]
-instance Show Comp  where
-  show (Comp xs) = concatMap (\x -> (show x ++ "\n") ) xs
-
-acts' :: Comp
-acts' = Comp $ zip (acts mySudoku) (map (incrementAction mySudoku) (acts mySudoku))
 
 solutions :: [[Int]] -> Q -> [Solution]
 solutions = undefined
-
 
 
 solutions3 :: [[Int]] ->  [Solution]
