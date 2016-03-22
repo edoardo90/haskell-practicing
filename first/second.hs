@@ -12,9 +12,11 @@ data Action = Action Int Coord
 instance Show Action where
   show (Action num (Coord x y )) = " (" ++ show x ++ ", " ++ show y ++ ") = "  ++ show num
 
+f x = product [1..x]
 
 data Solution = Solution [[Int]]
 data Outcome = Outcome [[Int]]
+
 
 instance Show Outcome where
   show (Outcome xss) = concatMap (\row -> "\n" ++ show row ) xss
@@ -34,8 +36,6 @@ type Q = [(CubeState, ActionScheduled)]
 data Comp = Comp [(ActionScheduled, Maybe ActionScheduled)]
 instance Show Comp  where
   show (Comp xs) = concatMap (\x -> show x ++ "\n" ) xs
-
-
 
 
 ---- IA CORE -------------------------------------

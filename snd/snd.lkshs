@@ -1,0 +1,18 @@
+Version of session file format:
+               1
+Time of storage:
+               "Tue Mar 22 16:12:56 CET 2016"
+Layout:        VerticalP (TerminalP {paneGroups = fromList [], paneTabs = Just TopP, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (HorizontalP (TerminalP {paneGroups = fromList [("Browser",HorizontalP (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (HorizontalP (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 167) 111)], paneTabs = Just BottomP, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 430) 981
+Population:    [(Just (ErrorsSt ErrorsState),[SplitP RightP,SplitP TopP]),(Just (FilesSt FilesState),[SplitP RightP,SplitP TopP]),(Just (InfoSt (InfoState Nothing)),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP BottomP,SplitP BottomP]),(Just (LogSt LogState),[SplitP RightP,SplitP BottomP]),(Just (BufferSt (BufferState "/home/edoardo/dev/learning/haskell/snd/sadf/src/Main.hs" 1207)),[SplitP LeftP]),(Just (ModulesSt (ModulesState 286 (PackageScope False,False) (Just (ModuleName ["Main"]),Nothing) (ExpanderState {packageExp = ([],[]), packageExpNoBlack = ([],[]), packageDExp = ([],[]), packageDExpNoBlack = ([],[]), workspaceExp = ([],[]), workspaceExpNoBlack = ([],[]), workspaceDExp = ([],[]), workspaceDExpNoBlack = ([],[]), systemExp = ([],[]), systemExpNoBlack = ([],[])}))),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP BottomP,SplitP TopP]),(Just (WorkspaceSt WorkspaceState),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP TopP])]
+Window size:   (1920,1003)
+Completion size:
+               (750,400)
+Workspace:     Just "/home/edoardo/dev/learning/haskell/snd/snd.lkshw"
+Active pane:   Just "Main.hs"
+Toolbar visible:
+               True
+FindbarState:  (True,FindState {entryStr = "", entryHist = ["show","trace"], replaceStr = "", replaceHist = [], caseSensitive = False, entireWord = False, wrapAround = False, regex = False, lineNr = 1})
+Recently opened files:
+               ["/home/edoardo/dev/learning/haskell/first/second.hs","/home/edoardo/dev/learning/haskell/first/first.hs","/home/edoardo/.leksah-0.12/leksah-welcome/src/Main.hs","/home/edoardo/.leksah-0.12/packageSources/haskell98-2.0.0.2/Array.hs","/home/edoardo/dev/learning/haskell/lek/lekk.lkshw"]
+Recently opened workspaces:
+               ["/home/edoardo/leksah.lkshw"]

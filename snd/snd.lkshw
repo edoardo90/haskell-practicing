@@ -1,0 +1,10 @@
+Version of workspace file format:
+               1
+Time of storage:
+               "Tue Mar 22 16:10:30 CET 2016"
+Name of the workspace:
+               "snd"
+File paths of contained packages:
+               ["sadf/sadf.cabal"]
+Maybe file path of an active package:
+               Just "sadf/sadf.cabal"
